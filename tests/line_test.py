@@ -2,8 +2,8 @@ import pytest
 from math import inf
 from copy import copy
 
-from src.line import Line
-from src.point import Point
+from src.origametry.line import Line
+from src.origametry.point import Point
 
 
 """ create directly from coefficients of the general-form line equation """

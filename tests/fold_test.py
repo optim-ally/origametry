@@ -2,9 +2,9 @@ import pytest
 import unittest
 from math import sqrt, inf
 
-from src.line import Line
-from src.point import Point
-from src.fold import fold
+from src.origametry.line import Line
+from src.origametry.point import Point
+from src.origametry.fold import fold
 
 case = unittest.TestCase()
 

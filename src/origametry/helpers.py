@@ -1,8 +1,8 @@
 from math import sqrt, inf
 
-import src.line as Line
-import src.point as Point
-import src.constants as constants
+import src.origametry.line as Line
+import src.origametry.point as Point
+import src.origametry.constants as constants
 
 
 def cast_sympy_to_real(solutions):

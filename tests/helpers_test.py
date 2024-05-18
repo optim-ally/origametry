@@ -1,9 +1,9 @@
 import pytest
 from math import sqrt
 
-from src.line import Line
-from src.point import Point
-from src.helpers import distance
+from src.origametry.line import Line
+from src.origametry.point import Point
+from src.origametry.helpers import distance
 
 
 """ distance """
