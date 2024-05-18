@@ -7,12 +7,15 @@ LONG_DESCRIPTION = (HERE / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="origametry",
-    version="0.0.2",
+    version="0.0.3",
     description="Package to perform calculations using the Huzita-Justin axioms for 2-dimensional origami",
     author="Alastair Stanley",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
     python_requires=">=3.9.0",
+    project_urls={
+        "Source": "https://github.com/optim-ally/origametry.git",
+    },
     classifiers=[
         # see https://pypi.org/classifiers/
         "Development Status :: 3 - Alpha",
