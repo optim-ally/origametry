@@ -1,0 +1,45 @@
+[build-system]
+requires = [
+    "setuptools >= 61.0",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = "-ra --cov --cov-report term-missing"
+testpaths = [
+    "tests",
+]
+
+[tool.pylint.messages_control]
+disable = [
+    # Documentation
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "pointless-string-statement",
+
+    # Formatting
+    "duplicate-code",
+]
+
+[tools.coverage.report]
+show_missing=true
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py{39,310,311}
+isolated_build = True
+
+[testenv]
+deps =
+    -rrequirements-dev.txt
+commands =
+    python -m pytest {posargs}
+"""
+
+[tool.mypy]
+explicit_package_bases = true
+strict = true
+packages = "origametry"
+mypy_path = "$MYPY_CONFIG_FILE_DIR/src"
