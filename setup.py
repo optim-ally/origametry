@@ -14,6 +14,7 @@ setup(
     long_description_content_type="text/markdown",
     python_requires=">=3.9.0",
     install_requires=[
+        "matplotlib>=3.9.0",
         "multimethod>=1.11.2",
         "numpy>=1.26.4",
         "sympy>=1.12",
