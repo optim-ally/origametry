@@ -1,6 +1,12 @@
-from math import sqrt, inf
+from math import sqrt, inf, isclose
 
-from .constants import TOLERANCE
+
+def is_close(a, b):
+    """
+    check whether the values of `a` and `b` are close enough to be considered equal
+    """
+
+    return isclose(a, b, abs_tol=1e-10)
 
 
 def cast_to_real(solutions):
@@ -13,7 +19,7 @@ def cast_to_real(solutions):
         complex_solution = tuple(complex(x) for x in s)
 
         # throw out any solutions with non-negligible imaginary components
-        if all(abs(x.imag) < TOLERANCE for x in complex_solution):
+        if all(is_close(x.imag, 0) for x in complex_solution):
             real_solutions.append(tuple(x.real for x in complex_solution))
 
     return real_solutions

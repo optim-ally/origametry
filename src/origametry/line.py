@@ -3,7 +3,7 @@ from typing import Union, Optional
 from multimethod import multimethod
 
 from .point import Point
-from .constants import TOLERANCE
+from .helpers import is_close
 
 Number = Union[int, float]
 
@@ -134,9 +134,9 @@ class Line:
             return False
 
         return (
-            abs(self._a - other.a) < TOLERANCE and
-            abs(self._b - other.b) < TOLERANCE and
-            abs(self._c - other.c) < TOLERANCE
+            is_close(self._a, other.a) and
+            is_close(self._b, other.b) and
+            is_close(self._c, other.c)
         )
 
     @property

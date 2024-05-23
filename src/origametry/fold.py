@@ -9,9 +9,8 @@ from .point import Point
 from .reflect import reflect
 from .helpers import (
     cast_to_real, remove_duplicates, midpoint, inverse, projection, distance,
-    points_on_line,
+    points_on_line, is_close
 )
-from .constants import TOLERANCE
 
 Creases = Optional[Union[Line, List[Line]]]
 
@@ -313,7 +312,7 @@ def _fold(p1: Point, line_1: Line, p2: Point, line_2: Line) -> Creases:
 
     for A in (A1, A2):
         for iy, ix in np.ndindex(A.shape):
-            if abs(A[iy, ix]) < TOLERANCE:
+            if is_close(A[iy, ix], 0):
                 A[iy, ix] = 0
 
     # and then multiplying out the general conic form to get equations for the duals
@@ -352,7 +351,7 @@ def _fold(p1: Point, line_1: Line, p2: Point, line_2: Line) -> Creases:
         Line(a, b, c)
         for a, b, c in solutions
         # ignore the solution (0, 0, 1), which represents the tangent at infinity
-        if abs(a) > TOLERANCE or abs(b) > TOLERANCE
+        if not is_close(a, 0) or not is_close(b, 0)
     ])
 
 

@@ -1,5 +1,4 @@
-from .constants import TOLERANCE
-from .helpers import projection
+from .helpers import projection, is_close
 
 
 class Point:
@@ -18,8 +17,8 @@ class Point:
             return False
 
         return (
-            abs(self._x - other.x) < TOLERANCE and
-            abs(self._y - other.y) < TOLERANCE
+            is_close(self._x, other.x) and
+            is_close(self._y, other.y)
         )
 
     @property
