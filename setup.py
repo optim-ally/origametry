@@ -7,7 +7,7 @@ LONG_DESCRIPTION = (HERE / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="origametry",
-    version="0.0.4",
+    version="0.0.5",
     description="Package to perform calculations using the Huzita-Justin axioms for 2-dimensional origami",
     author="Alastair Stanley",
     long_description=LONG_DESCRIPTION,

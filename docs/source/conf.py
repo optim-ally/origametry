@@ -7,7 +7,7 @@ copyright = '2024, Alastair Stanley'
 author = 'Alastair Stanley'
 
 release = '0.1'
-version = '0.0.4'
+version = '0.0.5'
 
 # -- General configuration
 
