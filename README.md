@@ -176,7 +176,7 @@ And here's an example of axiom 6 with no solutions:
 ```py
 creases = fold(P1, L1, P2, L2)
 
-assert creases == None
+assert creases is None
 ```
 
 Some axioms require that a crease passes through a point. This is equivalent to reflecting that point onto itself.
@@ -225,5 +225,5 @@ An example of axiom 7 with no solutions (`L1` and `L2` are parallel):
 ```py
 creases = fold(P1, L1, L2, L2)
 
-assert creases == None
+assert creases is None
 ```

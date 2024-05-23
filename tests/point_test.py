@@ -66,7 +66,7 @@ def test_point_on_line():
 
     actual = point.isOn(line)
 
-    assert actual == True
+    assert actual is True
 
 def test_point_not_on_line():
     point = Point(1, 2)
@@ -74,7 +74,7 @@ def test_point_not_on_line():
 
     actual = point.isOn(line)
 
-    assert actual == False
+    assert actual is False
 
 def test_point_on_horizontal_line():
     point = Point(1, 1)
@@ -82,7 +82,7 @@ def test_point_on_horizontal_line():
 
     actual = point.isOn(line)
 
-    assert actual == True
+    assert actual is True
 
 def test_point_not_on_horizontal_line():
     point = Point(1, 2)
@@ -90,7 +90,7 @@ def test_point_not_on_horizontal_line():
 
     actual = point.isOn(line)
 
-    assert actual == False
+    assert actual is False
 
 def test_point_on_vertical_line():
     point = Point(1, 1)
@@ -98,7 +98,7 @@ def test_point_on_vertical_line():
 
     actual = point.isOn(line)
 
-    assert actual == True
+    assert actual is True
 
 def test_point_not_on_vertical_line():
     point = Point(2, 1)
@@ -106,4 +106,4 @@ def test_point_not_on_vertical_line():
 
     actual = point.isOn(line)
 
-    assert actual == False
+    assert actual is False

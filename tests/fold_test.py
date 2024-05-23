@@ -265,7 +265,7 @@ def test_no_solutions():
 
     creases = fold(point_1, line, point_2, point_2)
 
-    assert creases == None
+    assert creases is None
 
 def test_no_solutions_points_equal():
     point_1 = Point(0, 2)
@@ -274,7 +274,7 @@ def test_no_solutions_points_equal():
 
     creases = fold(point_1, line, point_2, point_2)
 
-    assert creases == None
+    assert creases is None
 
 def test_point_already_on_line():
     point_1 = Point(2, 0)
@@ -531,7 +531,7 @@ def test_point_onto_line_and_perpendicular_to_parallel_line():
 
     crease = fold(point, line_1, line_2, line_2)
 
-    assert crease == None
+    assert crease is None
 
 def test_point_already_on_line_and_perpendicular_to_line():
     point = Point(1, 0)
@@ -568,7 +568,7 @@ def test_point_onto_point_and_through_point_no_solutions():
 
     crease = fold(point_1, point_2, point_3, point_3)
 
-    assert crease == None
+    assert crease is None
 
 def test_point_onto_point_and_point_onto_point():
     point_1 = Point(0, 0)
@@ -588,7 +588,7 @@ def test_point_onto_point_and_point_onto_point_no_solutions():
 
     crease = fold(point_1, point_2, point_3, point_4)
 
-    assert crease == None
+    assert crease is None
 
 def test_point_onto_point_perpendicular_to_line():
     point_1 = Point(1, 0)
@@ -606,7 +606,7 @@ def test_point_onto_point_perpendicular_to_line_no_solutions():
 
     crease = fold(point_1, point_2, line, line)
 
-    assert crease == None
+    assert crease is None
 
 def test_line_onto_line_and_through_point():
     line_1 = Line(0)
@@ -636,7 +636,7 @@ def test_line_onto_line_and_through_point_no_solutions():
 
     crease = fold(line_1, line_2, point, point)
 
-    assert crease == None
+    assert crease is None
 
 def test_line_onto_parallel_line_and_through_point():
     line_1 = Line(1, 0, 0)
@@ -654,7 +654,7 @@ def test_line_onto_parallel_line_and_through_point_no_solutions():
 
     crease = fold(line_1, line_2, point, point)
 
-    assert crease == None
+    assert crease is None
 
 def test_point_onto_point_and_line_onto_line():
     point_1 = Point(2, 1)
@@ -684,7 +684,7 @@ def test_point_onto_point_and_line_onto_line_no_solutions():
 
     crease = fold(point_1, point_2, line_1, line_2)
 
-    assert crease == None
+    assert crease is None
 
 def test_point_onto_line_and_point_onto_point():
     point_1 = Point(1, 2)
@@ -704,7 +704,7 @@ def test_point_onto_line_and_point_onto_point_no_solutions():
 
     crease = fold(point_1, line, point_2, point_3)
 
-    assert crease == None
+    assert crease is None
 
 def test_point_onto_line_and_line_onto_line():
     point_1 = Point(2, 1)
@@ -747,7 +747,7 @@ def test_point_onto_line_and_line_onto_line_no_solutions():
 
     crease = fold(point_1, line_1, line_2, line_3)
 
-    assert crease == None
+    assert crease is None
 
 """ bad input shape """
 

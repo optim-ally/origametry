@@ -95,7 +95,7 @@ def _trim_to_box(
         return None
     if len(within_box) == 2:
         return tuple(within_box)
-    if len(within_box) > 2:
+    if len(within_box) > 2:  # pragma: no cover
         # this can happen due to floating point errors at the corners of the box
         if cross_min_x in within_box and cross_max_x in within_box:
             return (cross_min_x, cross_max_x)

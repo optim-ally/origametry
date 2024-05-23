@@ -270,7 +270,7 @@ def test_parallel_lines():
 
     intersection = line_1.intersection(line_2)
 
-    assert intersection == None
+    assert intersection is None
 
 def test_this_line_vertical():
     point_1 = Point(0, 0)
