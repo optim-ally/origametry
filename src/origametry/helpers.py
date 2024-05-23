@@ -3,13 +3,13 @@ from math import sqrt, inf
 from .constants import TOLERANCE
 
 
-def cast_sympy_to_real(solutions):
+def cast_to_real(solutions):
     """ remove imaginary floating-point errors and cast to floats """
 
     real_solutions = []
 
     for s in solutions:
-        # cast SymPy expressions to built-in `complex` type
+        # cast expressions to built-in `complex` type
         complex_solution = tuple(complex(x) for x in s)
 
         # throw out any solutions with non-negligible imaginary components

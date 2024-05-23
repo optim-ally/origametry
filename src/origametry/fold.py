@@ -8,7 +8,7 @@ from .line import Line
 from .point import Point
 from .reflect import reflect
 from .helpers import (
-    cast_sympy_to_real, remove_duplicates, midpoint, inverse, projection, distance,
+    cast_to_real, remove_duplicates, midpoint, inverse, projection, distance,
     points_on_line,
 )
 from .constants import TOLERANCE
@@ -329,7 +329,7 @@ def _fold(p1: Point, line_1: Line, p2: Point, line_2: Line) -> Creases:
     # use SymPy to solve the dual equations for these intersections:
     dual_intersections = sympy.solve([dual_conic_1, dual_conic_2], [a, b, c])
 
-    solutions = cast_sympy_to_real([
+    solutions = cast_to_real([
         # solutions are correct to some scalar multiple; set remaining variables to 1
         tuple(x.subs({a: 1, b: 1, c: 1}) for x in s)
         for s in dual_intersections
@@ -343,7 +343,7 @@ def _fold(p1: Point, line_1: Line, p2: Point, line_2: Line) -> Creases:
         sympy.Eq(special_vec.dot(A2).dot(special_vec), 0),
     ], [a, b])
 
-    solutions += cast_sympy_to_real([
+    solutions += cast_to_real([
         tuple(x.subs({a: 1, b: 1}) for x in s) + (0,)
         for s in special_dual_intersections
     ])
