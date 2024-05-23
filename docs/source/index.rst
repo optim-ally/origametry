@@ -8,6 +8,7 @@ Contents
 
 .. toctree::
 
+   installation
    usage
 
 What's in the name?
