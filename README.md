@@ -44,10 +44,10 @@ line = fold(point_1, point_2)
 lines = fold(point_1, line, point_2, point_2)
 ```
 
-~~And view your resulting crease pattern~~ (TODO)
+And view your resulting crease pattern
 
 ```py
-show(point_1, point_2, line, lines)
+show(point_1, point_2, line, creases=lines)
 ```
 
 #### Points
