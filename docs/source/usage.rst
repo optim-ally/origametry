@@ -96,7 +96,9 @@ There is also a :code:`Line` class that stores a straight line in terms of the s
    # vertical line
    line = Line(math.inf)
 
-* as the result of a :ref:`fold<Simulating folds>`.
+* as the result of a :ref:`fold <_simulating_folds>`.
+
+.. _simulating_folds:
 
 Simulating folds
 ----------------

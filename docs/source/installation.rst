@@ -1,11 +1,6 @@
 Installation
 ============
 
-.. _installation:
-
-Installation
-------------
-
 Origametry can be installed using `pip <https://pip.pypa.io/en/stable/user_guide/>`_
 
 .. code-block:: console
