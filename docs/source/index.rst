@@ -9,7 +9,7 @@ Contents
 .. toctree::
 
    installation
-   usage
+   usage/index
 
 What's in the name?
 -------------------
