@@ -23,7 +23,7 @@ The :code:`Line` class stores a straight line in terms of the standard-form line
    # `c` can be omitted and defaults to 0
    line = Line(3, -1)
 
-* with two distinct points
+* with two distinct :ref:`points <points>`
 
 .. code-block:: python
 
@@ -32,7 +32,7 @@ The :code:`Line` class stores a straight line in terms of the standard-form line
 
    line = Line(p1, p2)
 
-* with one point and a gradient
+* with one :ref:`point <points>` and a gradient
 
 .. code-block:: python
 
