@@ -20,7 +20,9 @@ setup(
         "sympy>=1.12",
     ],
     project_urls={
+        "Documentation": "https://origametry.readthedocs.io/",
         "Source": "https://github.com/optim-ally/origametry.git",
+        "Tracker": "https://github.com/optim-ally/origametry/issues",
     },
     classifiers=[
         # see https://pypi.org/classifiers/
