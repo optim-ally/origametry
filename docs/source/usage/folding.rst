@@ -19,7 +19,7 @@ The :code:`reflect` function simply returns the reflection of a point or line ac
 
 The :code:`fold` function is much more complex. It takes a pairwise series of points and/or lines and tries to find a fold that reflects every element onto its pair. The function returns the crease of that fold or a list of creases, or :code:`None` if no such fold is possible. This concept is best explained with pictures.
 
-Fold `p1` onto `p2` (axiom 2):
+Fold :code:`p1` onto :code:`p2` (:ref:`axiom 2 <axioms>`):
 
 .. image:: ../../images/axiom_2.png
     :width: 360
@@ -36,7 +36,7 @@ Fold `p1` onto `p2` (axiom 2):
     # find the fold that puts `p1` onto `p2`
     crease = fold(p1, p2)
 
-Fold `line_1` onto `line_2` (axiom 3):
+Fold :code:`line_1` onto :code:`line_2` (:ref:`axiom 3 <axioms>`):
 
 .. image:: ../../images/axiom_3.png
     :width: 360
@@ -46,7 +46,7 @@ Fold `line_1` onto `line_2` (axiom 3):
 
     crease = fold(line_1, line_2)
 
-If `line_1` and `line_2` are not parallel, there are 2 folds that work:
+If :code:`line_1` and :code:`line_2` are not parallel, there are 2 folds that work:
 
 .. image:: ../../images/axiom_3_double.png
     :width: 360
@@ -59,7 +59,7 @@ If `line_1` and `line_2` are not parallel, there are 2 folds that work:
     crease_1 = creases[0]
     crease_2 = creases[1]
 
-Fold `p1` onto `line_1` **AND** `p2` onto `line_2` (axiom 6):
+Fold :code:`p1` onto :code:`line_1` **AND** :code:`p2` onto :code:`line_2` (:ref:`axiom 6 <axioms>`):
 
 .. image:: ../../images/axiom_6.png
     :width: 360
@@ -73,7 +73,7 @@ Fold `p1` onto `line_1` **AND** `p2` onto `line_2` (axiom 6):
     crease_2 = creases[1]
     crease_3 = creases[2]
 
-And here's an example of axiom 6 with no solutions:
+And here's an example of :ref:`axiom 6 <axioms>` with no solutions:
 
 .. image:: ../../images/axiom_6_none.png
     :width: 360
@@ -85,9 +85,9 @@ And here's an example of axiom 6 with no solutions:
 
     assert creases is None
 
-Some axioms require that a crease passes through a point. This is equivalent to reflecting that point onto itself.
+Some :ref:`axioms` require that a crease passes through a point. This is equivalent to reflecting that point onto itself.
 
-Thus we can fold through `p1` and `p2` (axiom 1):
+Thus we can fold through :code:`p1` and :code:`p2` (:ref:`axiom 1 <axioms>`):
 
 .. image:: ../../images/axiom_1.png
     :width: 360
@@ -97,7 +97,7 @@ Thus we can fold through `p1` and `p2` (axiom 1):
 
     crease = fold(p1, p1, p2, p2)
 
-And fold `p1` onto `line_1` through `p2` (axiom 5):
+And fold :code:`p1` onto :code:`line_1` through :code:`p2` (:ref:`axiom 5 <axioms>`):
 
 .. image:: ../../images/axiom_5.png
     :width: 360
@@ -110,9 +110,9 @@ And fold `p1` onto `line_1` through `p2` (axiom 5):
     crease_1 = creases[0]
     crease_2 = creases[1]
 
-Finally, some axioms require that a crease is perpendicular to a line. This is nearly equivelent to reflecting a line onto itself, with the caveat that a crease going along a line also reflects it onto iself. Since the second case is trivial - the crease is identical to the original line - we choose to always interpret `fold(L, L, ...)` as being perpendicular to the line `L`.
+Finally, some :ref:`axioms` require that a crease is perpendicular to a line. This is nearly equivelent to reflecting a line onto itself, with the caveat that a crease going along a line also reflects it onto iself. Since the second case is trivial - the crease is identical to the original line - we choose to always interpret :code:`fold(L, L, ...)` as being perpendicular to the line :code:`L`.
 
-Fold through `p1` perpendicular to `line_1` (axiom 4):
+Fold through :code:`p1` perpendicular to :code:`line_1` (:ref:`axiom 4 <axioms>`):
 
 .. image:: ../../images/axiom_4.png
     :width: 360
@@ -122,7 +122,7 @@ Fold through `p1` perpendicular to `line_1` (axiom 4):
 
     crease = fold(p1, p1, line_1, line_1)
 
-Fold `p1` onto `line_1` perpendicular to `line_2` (axiom 7):
+Fold :code:`p1` onto :code:`line_1` perpendicular to :code:`line_2` (:ref:`axiom 7 <axioms>`):
 
 .. image:: ../../images/axiom_7.png
     :width: 360
@@ -132,7 +132,7 @@ Fold `p1` onto `line_1` perpendicular to `line_2` (axiom 7):
 
     crease = fold(p1, line_1, line_2, line_2)
 
-An example of axiom 7 with no solutions (`line_1` and `line_2` are parallel):
+An example of :ref:`axiom 7 <axioms>` with no solutions (:code:`line_1` and :code:`line_2` are parallel):
 
 .. image:: ../../images/axiom_7_none.png
     :width: 360
