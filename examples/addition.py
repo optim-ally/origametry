@@ -3,7 +3,7 @@ from origametry import Point, fold, reflect, distance
 
 def origami_add(a, b):
 
-    """ algorightm to add two *positive* numbers """
+    """ algorithm to add two *positive* numbers """
 
     # setup
     a1 = Point.Point(0, 0)
