@@ -5,7 +5,7 @@ Viewing Crease Patterns
 
 Once you have created a series of folds you may wish to see what they look like in the plane. The :code:`show` function can do this for you.
 
-Any :ref:`points <points>` and :ref:`lines <lines>` you pass to it are plotted and displayed using `matplotlib`:
+Any :ref:`points <points>` and :ref:`lines <lines>` you pass to it are plotted and displayed using :code:`matplotlib`:
 
 .. code-block:: python
 
@@ -20,7 +20,7 @@ Any :ref:`points <points>` and :ref:`lines <lines>` you pass to it are plotted a
     :width: 360
     :alt: Screenshot of a point and a line plotted using the "show" function
 
-You can also pass lines as `creases` to make them display as dashed lines in the plot. The `creases` parameter accepts a list of `Line` objects or a single `Line` or `None`, which means you can pass any result from the `fold` function without worrying about its type:
+You can also pass lines as :code:`creases` to make them display as dashed lines in the plot. The :code:`creases` parameter accepts a list of :code:`Line` objects or a single :code:`Line` or :code:`None`, which means you can pass any result from the :code:`fold` function without worrying about its type:
 
 .. code-block:: python
 
@@ -40,7 +40,7 @@ You can also pass lines as `creases` to make them display as dashed lines in the
     :width: 360
     :alt: Screenshot of points, lines and creases plotted using the "show" function
 
-The `show` function always tries to calculate the best bounding box for each set of points, lines and creases. They will all be visible by default as well as any intersections of lines and/or creases. The bounding box is also square by default as a nod to traditional origami paper. You may override this by passing your own `bounding_box` tuple of the form `(min_x, min_y, max_x, max_y)`:
+The :code:`show` function always tries to calculate the best bounding box for each set of points, lines and creases. They will all be visible by default as well as any intersections of lines and/or creases. The bounding box is also square by default as a nod to traditional origami paper. You may override this by passing your own :code:`bounding_box` tuple of the form :code:`(min_x, min_y, max_x, max_y)`:
 
 .. code-block:: python
 
