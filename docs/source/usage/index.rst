@@ -6,3 +6,4 @@ Usage
    points
    lines
    folding
+   showing
