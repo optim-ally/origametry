@@ -68,7 +68,7 @@ def test_vertical_point_onto_point():
 
     assert crease == Line(0, -1, 1)
 
-def test_point_onto_it():
+def test_point_onto_itself():
     point_1 = Point(0, 2)
     point_2 = Point(0, 2)
 
@@ -160,7 +160,7 @@ def test_vertical_line_onto_parallel_line():
 
     assert crease == Line(-1, 0, 1)
 
-def test_line_onto_it():
+def test_line_onto_itself():
     line_1 = Line(0, 2)
     line_2 = Line(0, 2)
 
@@ -185,7 +185,29 @@ def test_perpendicular_to_line_and_through_point():
 
     assert crease == Line(-.1, -.2, 1)
 
-# TODO: fully test axiom 4
+def test_perpendicular_to_line_and_through_point_on_that_line():
+    point = Point(1, 2)
+    line = Line(-2, 1, 0)
+
+    crease = fold(line, line, point, point)
+
+    assert crease == Line(-.2, -.4, 1)
+
+def test_perpendicular_to_vertical_line_and_through_point():
+    point = Point(0, 5)
+    line = Line(-1, 0, 2)
+
+    crease = fold(line, line, point, point)
+
+    assert crease == Line(0, -1, 5)
+
+def test_perpendicular_to_horizontal_line_and_through_point():
+    point = Point(5, 0)
+    line = Line(0, -1, 2)
+
+    crease = fold(line, line, point, point)
+
+    assert crease == Line(-1, 0, 5)
 
 """ axiom 5: fold point onto line and through point """
 
