@@ -33,4 +33,4 @@ And view your resulting crease pattern
 show(point_1, point_2, line, creases=creases)
 ```
 
-![example plot](example_plot.png)
+![example plot](https://github.com/optim-ally/origametry/raw/main/example_plot.png)
