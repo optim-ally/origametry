@@ -110,7 +110,7 @@ And fold :code:`p1` onto :code:`line_1` through :code:`p2` (:ref:`axiom 5 <axiom
     crease_1 = creases[0]
     crease_2 = creases[1]
 
-Finally, some :ref:`axioms <axioms>` require that a crease is perpendicular to a line. This is nearly equivelent to reflecting a line onto itself, with the caveat that a crease going along a line also reflects it onto iself. Since the second case is trivial - the crease is identical to the original line - we choose to always interpret :code:`fold(L, L, ...)` as being perpendicular to the line :code:`L`.
+Finally, some :ref:`axioms <axioms>` require that a crease is perpendicular to a line. This is nearly equivalent to reflecting a line onto itself, with the caveat that a crease going along a line also reflects it onto iself. Since the second case is trivial - the crease is identical to the original line - we choose to always interpret :code:`fold(L, L, ...)` as being perpendicular to the line :code:`L`.
 
 Fold through :code:`p1` perpendicular to :code:`line_1` (:ref:`axiom 4 <axioms>`):
 
